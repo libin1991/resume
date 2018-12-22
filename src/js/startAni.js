@@ -31,17 +31,17 @@ function show(fn) {
   // 去除小鸟
   $('#birdHid').remove();
   // 网页加载
-  (function() {
+  (function () {
     //获取网页中所有图片
     const img = $('img');
     const imgNum = img.length;
     let index = 0;
     img.each((i, el) => {
       let oImg = new Image();
-      oImg.onload = function() {
-        index ++;
-        ball.text( parseInt( index / imgNum * 100 ) + '%' );
-        if( index === imgNum ) {
+      oImg.onload = function () {
+        index++;
+        ball.text(parseInt(index / imgNum * 100) + '%');
+        if (index === imgNum) {
           ball.removeClass('ballShake');
           go();
         }
@@ -51,10 +51,10 @@ function show(fn) {
   })();
   //logo交互效果
   logo.hover(
-    function() {
-        $(this).addClass('rubberBand');
+    function () {
+      $(this).addClass('rubberBand');
     },
-    function() {
+    function () {
       $(this).removeClass('rubberBand');
     }
   );
@@ -62,34 +62,34 @@ function show(fn) {
   function go() {
     const pub = require('./public');
     const t = new pub.timeout();
-    t.to(function() {
+    t.to(function () {
       // 小球放大
       ball.text('').addClass('ac');
     }, 100)
-    .to(function() {
-      // 背景出现
-      bg.addClass('ac');
-      // 第一屏出现
-      pageFirst.addClass('show');
-    }, 550)
-    .to(function() {
-      // 小球移出
-      ball.remove();
-      // 背景移开
-      bg1.addClass('lift');
-      bg2.addClass('lift');
-    }, 100)
-    .to(fn)
-    .to(function() {
-      // logo 出现
-      logo.addClass('ac');
-      navA.addClass('ac');
-      sun.addClass('ac');
-    }, 200)
-    .to(function() {
-      bg.remove();
-      sun.addClass('sunRotate');
-    }, 1200).start();
+      .to(function () {
+        // 背景出现
+        bg.addClass('ac');
+        // 第一屏出现
+        pageFirst.addClass('show');
+      }, 550)
+      .to(function () {
+        // 小球移出
+        ball.remove();
+        // 背景移开
+        bg1.addClass('lift');
+        bg2.addClass('lift');
+      }, 100)
+      .to(fn)
+      .to(function () {
+        // logo 出现
+        logo.addClass('ac');
+        navA.addClass('ac');
+        sun.addClass('ac');
+      }, 200)
+      .to(function () {
+        bg.remove();
+        sun.addClass('sunRotate');
+      }, 1200).start();
   }
 }
 module.exports = show;

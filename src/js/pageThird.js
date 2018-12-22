@@ -1,7 +1,7 @@
 // 获取experience
 const experience = $('#experience');
-experience.onScroll(function(dir, e) {
-  if( experience[0].offsetHeight < experience[0].scrollHeight ) e.stopPropagation();
+experience.onScroll(function (dir, e) {
+	if (experience[0].offsetHeight < experience[0].scrollHeight) e.stopPropagation();
 });
 // 获取date
 const dateNum = $('.ex-date-num');
