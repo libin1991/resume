@@ -20,7 +20,7 @@ module.exports = {
             // GIT remote
             repo: "git@github.com:chandlerCao/resume.git",
             // path in the server
-            path: "/software/nginx-1.15.7/html/"
+            path: "/software/nginx-1.15.7/html"
         },
     }
 }
