@@ -7,11 +7,12 @@ module.exports = {
         // "production" is the environment name
         production: {
             // SSH key path, default to $HOME/.ssh
-            key: "/Users/Administrator/.ssh",
+            key: "C:/Users/Administrator/.ssh/id_rsa.pub",
             // SSH user
             user: "root",
             // SSH host
             host: ['47.105.68.42'],
+            port: '80',
             // SSH options with no command-line flag, see 'man ssh'
             // can be either a single string or an array of strings
             ssh_options: "StrictHostKeyChecking=no",
