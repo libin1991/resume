@@ -15,7 +15,7 @@ const lessExtract = new extractTextWebpackPlugin({
 });
 const config = {
     entry: {
-        main: './src/js/index.js',
+        main: './resume.js',
     },
     output: {
         path: path.join(__dirname, 'resume'),
