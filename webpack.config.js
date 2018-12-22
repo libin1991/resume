@@ -19,7 +19,7 @@ const config = {
     },
     output: {
         path: path.join(__dirname, 'resume'),
-        filename: 'js/[name].js',
+        filename: 'js/[name].js'
     },
     module: {
         rules: [
@@ -67,14 +67,9 @@ const config = {
             },
             {
                 test: /\.html$/,
-                use: [
-                    {
-                        loader: 'html-withimg-loader',
-                        options: {
-                            publicPath: '../',
-                        }
-                    }
-                ]
+                use: [{
+                    loader: 'html-loader'
+                }]
             }
         ]
     },
@@ -112,6 +107,6 @@ if (isDev) {
     );
 } else {
     config.mode = 'production';
-    config.plugins.push(new cleanWebpackPlugin(['build']));
+    config.plugins.push(new cleanWebpackPlugin(['resume']));
 }
 module.exports = config
