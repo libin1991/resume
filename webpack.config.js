@@ -18,7 +18,7 @@ const config = {
         main: './resume.js',
     },
     output: {
-        path: path.join(__dirname, 'resume'),
+        path: path.join(__dirname, 'production'),
         filename: 'js/[name].js'
     },
     module: {
