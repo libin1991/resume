@@ -9,7 +9,7 @@ module.exports = {
             // SSH key path, default to $HOME/.ssh
             key: "C:/Users/Administrator/.ssh/id_rsa.pub",
             // SSH user
-            user: "root",
+            user: "Administrator",
             // SSH host
             host: ['47.105.68.42'],
             port: '80',
